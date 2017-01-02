@@ -25,7 +25,7 @@ class API(object):
             body = json.dumps(params)
         else:
             if params:
-                body = "?" + urllib.parse.urlencode(params)
+                body = "?" + urllib.urlencode(params)
 
         if self.api_key and self.api_secret:
             access_timestamp = str(time.time())
